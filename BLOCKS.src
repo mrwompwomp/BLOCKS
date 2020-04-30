@@ -1,0 +1,395 @@
+:DCS
+"AA55552222222266AA55552222222266AA665511AA111166AA665511AA111166AA66661166111155AA666611661111555555221166AAAA555555221166AAAA55555522116622115555552211662211552266665522221155226666552222115522665555111111552266555511111155222222AAAAAA2266222222AAAAAA2266
+If 80>det([[20
+Then
+	Disp "Get Doors CSE to run this.
+	Return
+End
+"rowSwap(BPDAT->Str0
+det(8
+If Str9="..P:NT:FN
+Then
+	det(4
+	"-
+	For(B,1,6
+		Ans+Ans
+	End
+	Ans->Str9
+	Ans->Str2
+	1
+	det(2
+	"binomcdf(7,0)-1->Str9
+	2
+	det(2
+Else
+	1
+	det(0
+	Str9->Str2
+	2
+	det(0
+End
+expr(Str9->H
+DelVar [F]{8,8->dim([F]
+Ans->dim([G]
+Fill(1,[G]
+DelVar Wreal(0,1,1
+Lbl M
+real(8,2,0
+real(0,3,4,223
+"Block Party CSE
+real(6,0,18,15,16
+real(6,0,19,16,84
+For(X,1,4
+	sub("New Game  High ScoreAbout     Quit      ",10X-9,10
+	real(6,0,sum({48,40,59,63},X,X),24+12X,70
+End
+1->X
+"real(7,8,sum({46,38,57,61},X,X),22+12X,sum({68,84,44,36},X,X),12->|u
+Repeat max(K={21,105,45,23
+	|u
+	Repeat max(K={21,105,25,34,45,23
+		getKey->K
+	End
+	If max(K={25,34
+	|u
+	X+(K=34)-(K=25->X
+	X-4(X=5)+4not(X->X
+End
+If K=45 or K=23
+Goto Q
+If X=4
+Goto Q
+If X=3
+Then
+	real(8,1,0
+	real(8,2,0
+	real(0,3,4,223
+	"Rules
+	real(6,0,60,5,70
+	"Place the pieces in/the grid.Rows and/columns are cleared/when they are full./Points are given/for completing rows/and columns.
+	real(6,0,1,23,70,47
+	Repeat getKey
+	End
+	real(0,3,4,223
+	"Controls
+	real(6,0,50,5,70
+	"Use the arrow keys/to move the cursor./Use 2ND or ENTER to/make selections.Use/DEL or CLEAR to/exit.
+	real(6,0,1,23,70,47
+	Repeat getKey
+	End
+	real(0,3,4,223
+	"Credits
+	real(6,0,50,5,70
+	"Written by/Mr Womp Womp//Special thanks to/PT- for helping out.
+	real(6,0,1,23,70,47
+	Repeat getKey
+	End
+	real(8,1,1
+End
+If X=2
+Then
+	real(8,1,1
+	real(8,2,0
+	real(0,3,4,223
+	"High Scores
+	real(6,0,35,5,16
+	real(6,0,36,6,84
+	For(B,1,8
+		sub(Str2,8B-7,8
+		real(6,0,10,20+10B,70
+		real(6,1,105,20+10B,70,|LH(B
+	End
+	Repeat getKey
+	End
+End
+If X=3 or X=2
+Goto M
+real(8,1,0
+real(8,2,0
+real(0,3,4,223
+For(X,1,8
+	For(Y,1,8
+		real(7,9,12X,12Y+5,11,11,182
+	End
+End
+"Score:
+real(6,0,18,5,7
+real(6,1,66,5,7,W
+Lbl S
+3->dim(L2
+For(X,1,3
+	randInt(1,5
+	sum({224,227,7,29,231},Ans,Ans->L2(X
+End
+randInt(1,16,3->L1
+For(B,0,2
+	L1(B+1->C
+	4-sum(C<{7,6,5->K
+	4-sum(C>{1,2,3
+	{K,Ans
+	If C>7
+	{2,2
+	If C>12
+	{3,3
+	Ans->dim([A]
+	Fill(1,[A]
+	If C<13 and C>8
+	0->[A](1+(C<11),1+((C=10) or (C=11
+	If C>12
+	Then
+		For(D,1,2
+			For(E,1,2
+				0->[A]((C<15)+D,((C=14) or (C=15))+E
+			End
+		End
+	End
+	
+	If not(B
+	Then
+		[A]->[B]
+	Else
+		If B=1
+		Then
+			[A]->[C]
+		Else
+			[A]->[D]
+		End
+	End
+End
+[B]->[E]
+For(H,0,2
+	If H=1
+	[C]->[E]
+	If H=2
+	[D]->[E]
+	For(F,1,sum(dim([E]),1,1
+		For(G,1,sum(dim([E]),2,2
+			If [E](F,G
+			real(7,9,9F+110,9G+38H-1,8,8,L2(H+1
+		End
+	End
+End
+DelVar KDelVar G
+"real(7,8,117,6+G,3+9sum(dim([E]),1,1),3+9sum(dim([E]),2,2->|u
+[B]->[E]
+Lbl R
+If not(sum(L2
+Goto S
+real(7,9,66,5,50,9,223
+real(6,1,66,5,7,W
+76
+If L2(1:Then:0
+Else:If L2(2:38:End
+Ans->G
+If G=38
+Then
+	[C]->[E]
+Else
+	[D]->[E]
+	If not(G
+	[B]->[E]
+End
+|u
+Repeat max(K={24,105,21,45,23
+	getKey->K
+	If (K=34 and G!=76) or (K=25 and G
+	Then
+		|u
+		1+G/38->T
+		0
+		If L2(T-(K=25)+(K=34
+		Then
+			1
+		Else
+			If (T=1 or T=3) and L2(T)!=sum(L2
+			2
+		End
+		G+38Ans(K=34)-38Ans(K=25->G
+		If G=38
+		Then
+			[C]->[E]
+		Else
+			[D]->[E]
+			If not(G
+			[B]->[E]
+		End
+		|u
+	End
+End
+If K=45 or K=23
+Goto Q
+|u
+1->K:DelVar ADelVar I
+Repeat max(K={21,105,45,23
+	If max(K={21,22,24,25,26,34,45,105,1
+	Then
+		For(X,1,sum(dim([E]),1,1
+			For(Y,1,sum(dim([E]),2,2
+				If [E](X,Y
+				real(7,8,12(X+A)-1,12(Y+I)+4,13,13
+	End:End:End
+	getKey->K
+	If max(K={24,25,26,34
+	Then
+		For(X,1,sum(dim([E]),1,1
+			For(Y,1,sum(dim([E]),2,2
+				If [E](X,Y
+				real(7,8,12(X+A)-1,12(Y+I)+4,13,13
+		End:End
+		I+(K=34 and I<8-sum(dim([E]),2,2))-(K=25 and I->I
+		A-(K=24 and A)+(K=26 and A<8-sum(dim([E]),1,1->A
+	End
+	If K=45 or K=23
+	Goto Q
+End
+If K=21 or K=105
+Then
+	DelVar VDelVar S
+	For(X,1,sum(dim([E]),1,1
+		For(Y,1,sum(dim([E]),2,2
+			If [E](X,Y
+			real(7,8,12(X+A)-1,12(Y+I)+4,13,13
+			If [E](X,Y) and 182!=real(7,1,12(X+A)+2,12(Y+I)+7
+			1->V
+	End:End
+	If not(V
+	Then
+		For(X,1,sum(dim([E]),1,1
+			For(Y,1,sum(dim([E]),2,2
+				If [E](X,Y
+				Then
+					1->[F]((X+A),(Y+I)
+					real(7,9,12(X+A),12(Y+I)+5,11,11,L2(1+G/38
+					W+1->W
+				End
+		End:End
+		DelVar S
+		For(X,1,8
+			Matr>list([F],X,|LA
+			Matr>list([F]^^T,X,|LB
+			If min(|LA
+			Then
+				For(Y,1,8
+					2->[F](Y,X
+					real(7,9,12Y,12X+5,11,11,182
+				End
+				S+1->S
+			End
+			If min(|LB
+			Then
+				For(Y,1,8
+					2->[F](X,Y
+					real(7,9,12X,12Y+5,11,11,182
+				End
+				S+1->S
+			End
+		End
+		[G]-abs([F]-[G]->[F]
+		real(7,9,118,8+G,38,38,223
+		0->L2(1+G/38
+	Else
+		For(L,1,4
+			real(8,2,3
+			rand(4
+			real(8,2,0
+		End
+	End
+End
+If S:Then
+	real(8,1,1
+	real(0,3,4,223
+	{80,240,552,1000,1250
+	Ans(S->S
+	W+S->W
+	real(8,2,0
+	For(L,1,4
+		real(6,1,66,50,70,S
+		rand(10
+		real(7,9,60,45,60,20,223
+		rand(10
+	End
+	real(8,1,0
+	real(8,2,0
+End
+Goto R
+Lbl Q
+If W>min(|LH
+Then
+	real(8,1,1
+	real(8,2,0
+	real(0,3,4,223
+	"Enter Your Name   A
+	real(6,0,5,3,70
+	"New High Score!
+	real(6,0,20,15,16
+	real(6,0,21,16,84
+	DelVar LDelVar M" ->Str3
+	Repeat K=105 and L
+		Repeat max(K={105,45,15,31,23
+			getKey->K
+			real(7,9,8L+50,48,2,9,223
+			If K>40 and K<94 and K!=44 and K!=45 and M!=2 and L<8
+			Then
+				L+1->L
+				Str3+sub("ABC  DEFGHIJKLMNOPQRSTUVWXYZabc  defghijklmnopqrstuvwxyz",K-5iPart(.1K+4)+28M,1->Str3
+			End
+			If K>71 and K<103 and M=2 and L<8 and min(K!={75,81,85,91,95
+			Then
+				L+1->L
+				Str3+sub("7894561230.",K-22-7int(.1K),1->Str3
+			End
+			Str3
+			real(6,0,42,49,70
+			real(7,9,8L+50,48,2,9,70
+		End
+		If K=45:Then
+			DelVar L" ->Str3
+			real(7,9,50,46,160,14,223
+		End
+		If K=31
+		Then
+			real(7,9,150,3,10,10,223
+			remainder(M+1,3->M
+			sub("Aa#",M+1,1
+			real(6,0,150,3,70
+		End
+		If K=23 and L
+		Then
+			real(7,9,8L+42,48,15,9,223
+			sub(Str3,1,L->Str3
+			L-1->L
+		End
+	End
+	sub(Str3,2,length(Str3)-1->Str3
+	While 8>length(Str3
+		Str3+" ->Str3
+	End
+	abs(sum(W>|LH)-9->S
+	augment(|LH,{W->|LH
+	SortD(|LH
+	8->dim(|LH
+	If S=1
+	Then
+		Str3+Str2
+	Else
+		sub(Str2,1,8S-8)+Str3+sub(Str2,8S-7,length(Str2)-8S+7
+	End
+	sub(Ans,1,64->Str9
+	1
+	det(1
+	real(0,3,4,255,1
+	real(0,3,4,255
+	"{->Str9
+	{0,1->L1
+	For(X,1,8
+		|LH(X)*L1->L2
+		LinReg(ax+b) {Y1}
+		Equ>String({Y1},Str1
+		Str9+sub(Str1,1,length(Str1)-3)+",->Str9
+	End
+	sub(Str9,1,length(Str9)-1->Str9
+	2
+	det(1
+End
+real(0,1,0,1
+Return
