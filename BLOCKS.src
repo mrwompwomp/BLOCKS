@@ -66,7 +66,7 @@ Then
 	real(0,3,4,223
 	"Rules
 	real(6,0,60,5,70
-	"Place the pieces in/the grid.Rows and/columns are cleared/when they are full./Points are given/for completing rows/and columns.
+	"Place the p\ieces in/the grid.Rows and/columns are cleared/when they are full./Points are given/for completing rows/and columns.
 	real(6,0,1,23,70,47
 	Repeat getKey
 	End
@@ -80,7 +80,7 @@ Then
 	real(0,3,4,223
 	"Credits
 	real(6,0,50,5,70
-	"Written by/Mr Womp Womp//Special thanks to/PT- for helping out.
+	"Written by/Mr Womp Womp//Special thanks to/PT- for help\ing out.
 	real(6,0,1,23,70,47
 	Repeat getKey
 	End
@@ -220,24 +220,25 @@ If K=45 or K=23
 Goto Q
 |u
 1->K:DelVar ADelVar I
+sum(dim([E]),1,1->L:sum(dim([E]),2,2->theta
 Repeat max(K={21,105,45,23
 	If max(K={21,22,24,25,26,34,45,105,1
 	Then
-		For(X,1,sum(dim([E]),1,1
-			For(Y,1,sum(dim([E]),2,2
+		For(X,1,L
+			For(Y,1,theta
 				If [E](X,Y
 				real(7,8,12(X+A)-1,12(Y+I)+4,13,13
 	End:End:End
 	getKey->K
 	If max(K={24,25,26,34
 	Then
-		For(X,1,sum(dim([E]),1,1
-			For(Y,1,sum(dim([E]),2,2
+		For(X,1,L
+			For(Y,1,theta
 				If [E](X,Y
 				real(7,8,12(X+A)-1,12(Y+I)+4,13,13
 		End:End
-		I+(K=34 and I<8-sum(dim([E]),2,2))-(K=25 and I->I
-		A-(K=24 and A)+(K=26 and A<8-sum(dim([E]),1,1->A
+		I+(K=34 and I<8-theta)-(K=25 and I->I
+		A-(K=24 and A)+(K=26 and A<8-L->A
 	End
 	If K=45 or K=23
 	Goto Q
@@ -245,8 +246,8 @@ End
 If K=21 or K=105
 Then
 	DelVar VDelVar S
-	For(X,1,sum(dim([E]),1,1
-		For(Y,1,sum(dim([E]),2,2
+	For(X,1,L
+		For(Y,1,theta
 			If [E](X,Y
 			real(7,8,12(X+A)-1,12(Y+I)+4,13,13
 			If [E](X,Y) and 182!=real(7,1,12(X+A)+2,12(Y+I)+7
@@ -254,8 +255,8 @@ Then
 	End:End
 	If not(V
 	Then
-		For(X,1,sum(dim([E]),1,1
-			For(Y,1,sum(dim([E]),2,2
+		For(X,1,L
+			For(Y,1,theta
 				If [E](X,Y
 				Then
 					1->[F]((X+A),(Y+I)
