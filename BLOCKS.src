@@ -143,7 +143,6 @@ For(B,0,2
 			End
 		End
 	End
-	
 	If not(B
 	Then
 		[A]->[B]
@@ -156,22 +155,21 @@ For(B,0,2
 		End
 	End
 End
-[B]->[E]
+[D]->[E]
 For(H,0,2
 	If H=1
 	[C]->[E]
 	If H=2
-	[D]->[E]
+	[B]->[E]
 	For(F,1,sum(dim([E]),1,1
 		For(G,1,sum(dim([E]),2,2
 			If [E](F,G
-			real(7,9,9F+110,9G+38H-1,8,8,L2(H+1
+			real(7,9,9F+110,9G+75-38H,8,8,L2(3-H
 		End
 	End
 End
 DelVar KDelVar G
 "real(7,8,117,6+G,3+9sum(dim([E]),1,1),3+9sum(dim([E]),2,2->|u
-[B]->[E]
 Lbl R
 If not(sum(L2
 Goto S
