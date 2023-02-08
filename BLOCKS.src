@@ -279,6 +279,8 @@ Then
 			End
 		End
 		[G]-abs([F]-[G]->[F]
+		If [F]=identity(8)-identity(8
+		S+1->S
 		real(7,9,118,8+G,38,38,223
 		0->L2(1+G/38
 	Else
@@ -292,15 +294,18 @@ End
 If S:Then
 	real(8,1,1
 	real(0,3,4,223
-	{80,240,552,1000,1250
+	{80,240,552,|E3,1250,2|E3
 	Ans(S->S
 	W+S->W
 	real(8,2,0
 	For(L,1,4
+		"Perfect Clear!
+		If [F]=identity(8)-identity(8
+		real(6,0,25,35,242
 		real(6,1,66,50,70,S
-		rand(10
-		real(7,9,60,45,60,20,223
-		rand(10
+		rand(9
+		real(0,3,4,223
+		rand(9
 	End
 	real(8,1,0
 	real(8,2,0
