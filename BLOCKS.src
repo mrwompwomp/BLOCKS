@@ -168,10 +168,8 @@ If not(sum(L2
 Goto S
 real(7,9,66,5,50,9,223
 real(6,1,66,5,7,W
-76
-If L2(1:Then:0
-Else:If L2(2:38:End
-Ans->G
+not(L2
+min(|E3Ans+{0,38,76}not(Ans->G
 If G=38
 Then
 	[C]
@@ -184,19 +182,15 @@ Ans->[E]
 |u
 Repeat max(K={24,105,21,45,23
 	getKey->K
-	If (K=34 and G!=76) or (K=25 and G
+	If T!=sum(L2) and ((K=34 and G!=76) or (K=25 and G
 	Then
 		|u
-		1+G/38->T
-		0
-		If L2(T-(K=25)+(K=34
-		Then
-			1
-		Else
-			If (T=1 or T=3) and L2(T)!=sum(L2
-			2
+		Repeat T
+			remainder(G+38(K=34)-38(K=25),114->G
+			L2(1+G/38->T
+			If not(T+G
+			76->G
 		End
-		G+38Ans(K=34)-38Ans(K=25->G
 		If G=38
 		Then
 			[C]
@@ -257,8 +251,7 @@ Then
 					W+1->W
 				End
 		End:End
-		DelVar S
-		For(X,1,8
+		For(X,1+min(I,A),max(I+theta,A+L
 			Matr>list([F],X,|LA
 			Matr>list([F]^^T,X,|LB
 			If min(|LA
